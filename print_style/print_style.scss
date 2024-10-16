@@ -40,7 +40,7 @@
 
     #address {
         float: left;
-        width: 85mm;
+        width: 80mm;
         padding-left: 5mm;
     }
 
@@ -77,12 +77,13 @@
         height: 1pt;
         background-color: black;
         position: absolute;
+        left: 2mm;
     }
 
     #faltmarke-1 {
         /* ( 105 mm - 10 mm margin ) */
         top: 95mm;
-        width: 12mm;
+        width: 5mm;
     }
 
     #lochmarke {
@@ -94,7 +95,7 @@
     #faltmarke-2 {
         /* ( 210 mm - 10 mm margin ) */
         top: 200mm;
-        width: 12mm;
+        width: 5mm;
     }
 
     #text {
