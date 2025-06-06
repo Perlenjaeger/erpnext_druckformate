@@ -83,10 +83,12 @@
                 {% set from_date = doc.from_date %}
                 {% set to_date = doc.to_date %}
             {% endif %}
-            {% set timesheet = frappe.get_doc("Timesheet", doc.timesheets[0].time_sheet)%}
-            {% if timesheet.start_date and timesheet.end_date %}
-                {% set from_date = timesheet.start_date %}
-                {% set to_date = timesheet.end_date %}
+            {% if doc.timesheets and doc.timesheets[0].time_sheet %}
+                {% set timesheet = frappe.get_doc("Timesheet", doc.timesheets[0].time_sheet) %}
+                {% if timesheet.start_date and timesheet.end_date %}
+                    {% set from_date = timesheet.start_date %}
+                    {% set to_date = timesheet.end_date %}
+                {% endif %}
             {% endif %}
             
             {% if from_date and to_date %}
